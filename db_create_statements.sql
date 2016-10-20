@@ -1,10 +1,12 @@
-CREATE USER 'bekir'@'%' IDENTIFIED BY 'Ukulele2014';
+/* change user_name and your_password with yours */
+
+CREATE USER 'user_name'@'%' IDENTIFIED BY 'your_password';
 create database mydb;
-GRANT ALL PRIVILEGES ON mydb.* TO 'bekir'@'%' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON mydb.* TO 'user_name'@'%' WITH GRANT OPTION;
 
 update mysql.db set Host='%' where Db='mydb';
 
-UPDATE mysql.user SET host = '%' WHERE user = 'bekir';
+UPDATE mysql.user SET host = '%' WHERE user = 'user_name';
 
 -- netshop 2016 tables
 drop table company cascade;
